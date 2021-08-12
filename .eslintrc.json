@@ -1,3 +1,18 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:tailwindcss/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "semi": ["error", "never", { "beforeStatementContinuationChars": "never" }],
+    "quotes": [2, "single"],
+    "import/prefer-default-export": "off",
+    "no-unexpected-multiline": "error"
+  },
+  "plugins": ["@typescript-eslint", "tailwindcss"],
+  "parser": "@typescript-eslint/parser"
 }
